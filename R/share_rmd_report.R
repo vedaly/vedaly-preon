@@ -1,9 +1,9 @@
 #!/usr/bin/env R
 
-# Copyright © 2025 OmicsChart Tech Ltd <info@omicschart.com>
+# Copyright © 2026 vedaly Ltd <info@vedaly.io>
 # Distributed under terms of the MIT license.
 
-#' UNDER DEVELOPMENT Share HTML and PDF outputs of rmd to PREON
+#' UNDER DEVELOPMENT Share HTML and PDF outputs of rmd to Vedaly
 #'
 #' @param rmd_file path to .rmd rmarkdown document
 #' @param project Project name where the report should be shared to. By default is it shared in active project (if set) or in personal workspace
@@ -14,9 +14,9 @@
 share_rmd_report <- function(rmd_file, project = "My Workspace", title = NULL) {
 
   stop("UNDER DEVELOPMENT")
-  auth_config = readRDS(file.path(tools::R_user_dir("omicschart", "config"), "session.rds"))
+  auth_config = readRDS(file.path(tools::R_user_dir("vedaly", "config"), "session.rds"))
 
-  api_url <- getOption("omicschart.api_url", default = "https://api.omicschart.com")
+  api_url <- getOption("vedaly.api_url", default = "https://api.omicschart.com")
   endpoint <- paste0(api_url, "/shareReportToPreon")
 
   response <- httr::POST(

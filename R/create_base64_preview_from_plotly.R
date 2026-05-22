@@ -1,6 +1,6 @@
 #!/usr/bin/env R
 
-# Copyright © 2025 OmicsChart Tech Ltd <info@omicschart.com>
+# Copyright © 2026 Vedaly Ltd <info@vedaly.io>
 # Distributed under terms of the MIT license.
 
 #' Generate base64 preview string from the full-size plotly image

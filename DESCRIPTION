@@ -1,16 +1,20 @@
-Package: omicschart
+Package: vedaly
 Type: Package
-Title: OmicsChart PREON Utilities
+Title: Vedaly R Utilities
 Version: 0.1.0
 Authors@R: c(
     person(
       "Tanya", "Aneichyk",
-      email = "tanya@omicschart.com",
+      email = "tanya@vedaly.com",
       role = c("aut", "cre")
+    ),
+    person(
+      "Vedaly Ltd",
+      role = c("cph", "fnd")
     )
   )
 Description: Use this package to share interactive results with your peers,
-    collect their feedback and make adjustments based on that feedback.
+    collect their feedback and make adjustments based on that feedback in Vedaly.
 License: Distributed under terms of the MIT license.
 Encoding: UTF-8
 Imports:

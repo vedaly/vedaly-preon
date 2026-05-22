@@ -1,6 +1,6 @@
 #!/usr/bin/env R
 
-# Copyright © 2025 OmicsChart Tech Ltd <info@omicschart.com>
+# Copyright © 2026 vedaly Ltd <info@vedaly.io>
 # Distributed under terms of the MIT license.
 
 #' Modify existing graph, move it into a different project, update description,
@@ -27,7 +27,7 @@ modify_graph <- function(
   if (!requireNamespace("httr", quietly = TRUE)) stop("Please install 'httr'")
   if (!requireNamespace("magick", quietly = TRUE)) stop("Please install 'magick'")
 
-  auth_config = readRDS(file.path(tools::R_user_dir("omicschart", "config"), "session.rds"))
+  auth_config = readRDS(file.path(tools::R_user_dir("vedaly", "config"), "session.rds"))
 
   if (is.null(dims)) dims <- c(800, 400)
 
@@ -36,7 +36,7 @@ modify_graph <- function(
     ocplot_and_preview_list <- generate_ocplot_and_preview_from_r_plot(graph, dims)
   }
 
-  api_url <- getOption("omicschart.api_url", default = "https://api.omicschart.com")
+  api_url <- getOption("vedaly.api_url", default = "https://api.omicschart.com")
   endpoint <- paste0(api_url, "/modifyGraph")
 
   response <- httr::POST(

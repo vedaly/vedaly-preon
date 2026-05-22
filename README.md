@@ -1,4 +1,4 @@
-# OmicsChart PREON Utilities
+# Vedaly Utilities
 
 An R package for sharing interactive results with peers, collecting feedback, and making adjustments based on that feedback.
 
@@ -6,12 +6,12 @@ An R package for sharing interactive results with peers, collecting feedback, an
 
 ```r
 # Install from GitHub
-devtools::install_github("omicschart/omicschart")
+devtools::install_github("vedaly/vedaly")
 ```
 
 ## Authentication
 
-Before using the package, you need to sign up and sign in to your OmicsChart account:
+Before using the package, you need to sign up and sign in to your Vedaly account:
 
 ```r
 # Sign up for a new account
@@ -28,7 +28,7 @@ sign_in(email = "your.email@example.com")
 The main functions of this package is `share_graph()` and 
 `<UNDER_DEVELOPMENT>share_report()`,
 which allows you to share various types of R plots and Rmakrdown reports to 
-OmicsChart PREON:
+Vedaly:
 
 ```r
 # Share a ggplot2 plot
@@ -77,4 +77,4 @@ This package is distributed under the terms of the MIT license.
 
 ## Support
 
-For support or questions, please contact tanya@omicschart.com 
+For support or questions, please contact info@vedaly.io 

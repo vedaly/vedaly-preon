@@ -2,7 +2,7 @@
 % Please edit documentation in R/share_graph.R
 \name{share_graph}
 \alias{share_graph}
-\title{Sign into OmicsChart PREON from R}
+\title{Sign into Vedaly from R}
 \usage{
 share_graph(
   graph = NULL,
@@ -27,5 +27,5 @@ share_graph(
 UUID of the graph
 }
 \description{
-Sign into OmicsChart PREON from R
+Sign into Vedaly from R
 }

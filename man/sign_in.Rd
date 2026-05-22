@@ -2,7 +2,7 @@
 % Please edit documentation in R/sign_in.R
 \name{sign_in}
 \alias{sign_in}
-\title{Sign into OmicsChart PREON from R}
+\title{Sign into Vedaly from R}
 \usage{
 sign_in(email)
 }
@@ -13,5 +13,5 @@ sign_in(email)
 Invisibly returns TRUE if login was successful.
 }
 \description{
-Sign into OmicsChart PREON from R
+Sign into Vedaly from R
 }

@@ -1,9 +1,9 @@
 #!/usr/bin/env R
 
-# Copyright © 2025 OmicsChart Tech Ltd <info@omicschart.com>
+# Copyright © 2026 Vedaly Ltd <info@vedaly.io>
 # Distributed under terms of the MIT license.
 
-#' Sign up for OmicsChart PREON
+#' Sign up for Vedaly
 #'
 #' @param email The email address of the user.
 #' @param first_name First (given) name of the user.
@@ -22,7 +22,7 @@ sign_up <- function(email, first_name, last_name, organization_name) {
     stop("Invalid email address format.")
   }
 
-  api_url <- getOption("omicschart.api_url", default = "https://api.omicschart.com")
+  api_url <- getOption("vedaly.api_url", default = "https://api.omicschart.com")
   endpoint <- paste0(api_url, "/newUserSignup")
 
   response <- httr::POST(

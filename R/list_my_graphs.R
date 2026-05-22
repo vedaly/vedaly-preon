@@ -1,6 +1,6 @@
 #!/usr/bin/env R
 
-# Copyright © 2025 OmicsChart Tech Ltd <info@omicschart.com>
+# Copyright © 2026 Vedaly Ltd <info@vedaly.io>
 # Distributed under terms of the MIT license.
 
 #' List graphs that are shared with or created by you
@@ -16,14 +16,14 @@ list_my_graphs <- function( project_name = NULL ) {
   if (!requireNamespace("httr", quietly = TRUE)) stop("Please install 'httr'")
   if (!requireNamespace("magick", quietly = TRUE)) stop("Please install 'magick'")
 
-  auth_config = readRDS(file.path(tools::R_user_dir("omicschart", "config"), "session.rds"))
+  auth_config = readRDS(file.path(tools::R_user_dir("vedaly", "config"), "session.rds"))
   active_project_name = ifelse(
     is.null(project_name),
     auth_config$active_project_name,
     project_name
   )
 
-  api_url <- getOption("omicschart.api_url", default = "https://api.omicschart.com")
+  api_url <- getOption("vedaly.api_url", default = "https://api.omicschart.com")
 
   response <- httr::POST(
     url = paste0(api_url, "/getGraphs"),

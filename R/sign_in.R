@@ -1,9 +1,9 @@
 #!/usr/bin/env R
 
-# Copyright © 2025 OmicsChart Tech Ltd <info@omicschart.com>
+# Copyright © 2026 Vedaly Ltd <info@vedaly.io>
 # Distributed under terms of the MIT license.
 
-#' Sign into OmicsChart PREON from R
+#' Sign into Vedaly from R
 #'
 #' @param email User email
 #' @return Invisibly returns TRUE if login was successful.
@@ -13,10 +13,10 @@ sign_in <- function(email) {
   if (!requireNamespace("askpass", quietly = TRUE)) stop("Please install 'askpass'")
   if (!grepl("@", email)) stop("Invalid email format")
 
-  password <- askpass::askpass("Enter your OmicsChart PREON password:")
+  password <- askpass::askpass("Enter your Vedaly password:")
   if (is.null(password) || password == "") stop("Sign-in cancelled.")
 
-  api_url <- getOption("omicschart.api_url", default = "https://api.omicschart.com")
+  api_url <- getOption("vedaly.api_url", default = "https://api.omicschart.com")
   endpoint <- paste0(api_url, "/userSignIn")
 
   response <- httr::POST(
@@ -49,8 +49,8 @@ sign_in <- function(email) {
     active_project_name = content$active_project_name
   )
 
-  dir.create(tools::R_user_dir("omicschart", "config"), recursive = TRUE, showWarnings = FALSE)
-  saveRDS(session, file.path(tools::R_user_dir("omicschart", "config"), "session.rds"))
+  dir.create(tools::R_user_dir("vedaly", "config"), recursive = TRUE, showWarnings = FALSE)
+  saveRDS(session, file.path(tools::R_user_dir("vedaly", "config"), "session.rds"))
 
   message("Sign-in successful.")
   invisible(TRUE)

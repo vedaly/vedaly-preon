@@ -1,6 +1,6 @@
 #!/usr/bin/env R
 
-# Copyright © 2025 OmicsChart Tech Ltd <info@omicschart.com>
+# Copyright © 2026 Vedaly Ltd <info@vedaly.io>
 # Distributed under terms of the MIT license.
 
 #' Generate JSON of OCPlot object and corresponding preview to be passed to the backend

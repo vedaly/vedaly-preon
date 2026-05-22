@@ -2,7 +2,7 @@
 % Please edit documentation in R/share_rmd_report.R
 \name{share_rmd_report}
 \alias{share_rmd_report}
-\title{UNDER DEVELOPMENT Share HTML and PDF outputs of rmd to PREON}
+\title{UNDER DEVELOPMENT Share HTML and PDF outputs of rmd to Vedaly}
 \usage{
 share_rmd_report(rmd_file, project = "My Workspace", title = NULL)
 }
@@ -17,5 +17,5 @@ share_rmd_report(rmd_file, project = "My Workspace", title = NULL)
 UUID of the report
 }
 \description{
-UNDER DEVELOPMENT Share HTML and PDF outputs of rmd to PREON
+UNDER DEVELOPMENT Share HTML and PDF outputs of rmd to Vedaly
 }

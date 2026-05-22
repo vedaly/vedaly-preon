@@ -2,12 +2,16 @@
 % Please edit documentation in R/sign_up.R
 \name{sign_up}
 \alias{sign_up}
-\title{Sign up for OmicsChart PREON}
+\title{Sign up for Vedaly}
 \usage{
-sign_up(email, organization_name)
+sign_up(email, first_name, last_name, organization_name)
 }
 \arguments{
 \item{email}{The email address of the user.}
+
+\item{first_name}{First (given) name of the user.}
+
+\item{last_name}{Last (family) name of the user.}
 
 \item{organization_name}{The name of the organization or affiliation.}
 }
@@ -15,5 +19,5 @@ sign_up(email, organization_name)
 Invisibly returns `TRUE` if the request was successful.
 }
 \description{
-Sign up for OmicsChart PREON
+Sign up for Vedaly
 }
