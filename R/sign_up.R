@@ -6,11 +6,13 @@
 #' Sign up for OmicsChart PREON
 #'
 #' @param email The email address of the user.
+#' @param first_name First (given) name of the user.
+#' @param last_name Last (family) name of the user.
 #' @param organization_name The name of the organization or affiliation.
 #'
 #' @return Invisibly returns `TRUE` if the request was successful.
 #' @export
-sign_up <- function(email, organization_name) {
+sign_up <- function(email, first_name, last_name, organization_name) {
 
   if (!requireNamespace("httr", quietly = TRUE)) {
     stop("Please install the 'httr' package.")
@@ -26,7 +28,12 @@ sign_up <- function(email, organization_name) {
   response <- httr::POST(
     url = endpoint,
     encode = "json",
-    body = list(email = email, organization_name = organization_name)
+    body = list(
+      email = email,
+      first_name = first_name,
+      last_name = last_name,
+      organization_name = organization_name
+    )
   )
 
   if (httr::http_error(response)) {

@@ -40,7 +40,9 @@ sign_in <- function(email) {
   # Save session to config path
   session <- list(
     email = email,
+    uuid = content$user_uuid,
     access_token = content$access_token,
+    id_token = content$id_token,
     refresh_token = content$refresh_token,
     expires_at = Sys.time() + 3600,
     organization_name = content$organization_name,
